@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+accounts:
+  message: "Hello from accounts service"
+  contactDetails:
+    name: "Duncan"
+    email: "duncan@laposte.net"
+  onCallSupport:
+    - "01 02 03 04 05"
+    - "06 07 08 09 10"
