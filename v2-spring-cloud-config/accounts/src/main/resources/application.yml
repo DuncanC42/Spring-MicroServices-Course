@@ -1,0 +1,36 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: duncan
+    password: ''
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  config:
+    import:
+      - "application_prod.yml"
+      - "application_qa.yml"
+  profiles:
+    active:
+      - "prod"
+
+
+build:
+  version: "3.0"
+
+accounts:
+  message: "Hello from accounts service"
+  contactDetails:
+    name: "Duncan"
+    email: "duncan@laposte.net"
+  onCallSupport:
+    - "01 02 03 04 05"
+    - "06 07 08 09 10"
